@@ -1,0 +1,171 @@
+// ### Primary
+
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+// ### Neutral
+$Coolgray: hsl(231, 11%, 63%);
+$Lightgray: hsl(229, 24%, 87%);
+$Magnolia: hsl(217, 100%, 97%);
+$Alabaster: hsl(231, 100%, 99%);
+$White: hsl(0, 0%, 100);
+
+//form colors
+$formInvalid:$Strawberry-red;
+$formValid:greenYellow;
+.active{
+    display: block;
+}
+.inactive{
+    display: none;
+}
+// @font-face {
+//     font-family: $bold;
+//     src: url(assets/fonts/Ubuntu-Bold.ttf);
+   
+//   }
+//   @font-face {
+//     font-family: $medium;
+//     src: url(assets/fonts/Ubuntu-Medium.ttf);
+   
+//   }
+//   @font-face {
+//     font-family: $regular;
+//     src: url(assets/fonts/Ubuntu-Regular.ttf);
+   
+//   };
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    font-size: 16px;
+}
+.desk{
+    display: flex;
+}
+.side-bar{
+   background-image:url('/assets/images/bg-sidebar-mobile.svg') ;  
+background-origin: border-box;
+   background-size: cover;
+   border-radius: 1em;
+width: 50vw;
+  background-repeat: no-repeat;
+min-height: 90vh;
+
+}
+h4{
+    text-transform: uppercase;
+    color: $Alabaster;
+}
+h4:first-child{
+    color: $Coolgray;
+}
+.list{
+    position: relative;
+    top: 2em;
+    left: 2em;
+}
+li{
+  list-style-type:none ;
+    position: relative;
+    margin-bottom: 6em;
+    color: $Alabaster;
+    
+}
+li::before{
+    
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    left: -30px;
+    top: 6px;
+    border-radius: 50%;
+border:2px solid $Alabaster;
+    content: '';
+ 
+}
+li:first-child::before{
+    background-color: $Light-blue;
+}
+.side-bar div{
+    margin-left: 2em;
+}
+div p{
+    position: absolute;
+    left: -1em;
+}
+
+
+// main bar
+.main-page{
+    margin:2em -2em 0 4em;
+    
+}
+.main-page h3:first-child{
+color: $Marine-blue;
+// font-family: $bold;
+}
+.main-page h3:nth-child(2){
+    text-transform: capitalize;
+    color:$Marine-blue;
+    font-size: 1px;
+    margin-bottom: 64em;
+    
+}
+.main-page input{
+margin-bottom: 10em;
+padding: .8em;
+width: 90%;
+// border-radius: 3px;
+
+}
+
+label{
+    color: $Marine-blue;
+width: 100px;
+    overflow-x: hidden;
+    display: inline-block;
+    min-height: 20px;
+    z-index: 100;
+}
+.set-error{
+  border:1px solid $formInvalid
+}
+.error{
+    color: $formInvalid;
+    font-size: 13px;
+    display: inline;
+    position: relative;
+right: -2.5em;
+    margin: 0;
+    padding: 0;
+}
+.set-success{
+    border:1px solid $formValid
+}
+.main-page button{
+    background-color: $Marine-blue;
+    position: absolute;
+    // left: 6em;
+    padding: 1.3em;
+    color: $Alabaster;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.fa-check{
+    position: relative;
+    left: -1.3em;
+    top: .3em;
+
+}
+#btn-link{
+    
+    padding: 2em;
+    position: relative;
+    left: 8em;
+}
+// main page 2

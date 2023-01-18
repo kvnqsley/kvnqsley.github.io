@@ -1,0 +1,205 @@
+// ### Primary
+
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+// ### Neutral
+$Coolgray: hsl(231, 11%, 63%);
+$Lightgray: hsl(229, 24%, 87%);
+$Magnolia: hsl(217, 100%, 97%);
+$Alabaster: hsl(231, 100%, 99%);
+$White: hsl(0, 0%, 100);
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    font-size: 16px;
+}
+.desk{
+    display: flex;
+}
+.side-bar{
+   background-image:url('/assets/images/bg-sidebar-mobile.svg') ;  
+background-origin: border-box;
+   background-size: cover;
+   border-radius: 1em;
+width: 50vw;
+  background-repeat: no-repeat;
+min-height: 90vh;
+
+}
+h4{
+    text-transform: uppercase;
+    color: $Alabaster;
+}
+h4:first-child{
+    color: $Coolgray;
+}
+.list{
+    position: relative;
+    top: 2em;
+    left: 2em;
+}
+li{
+  list-style-type:none ;
+    position: relative;
+    margin-bottom: 6em;
+    color: $Alabaster;
+    
+}
+li::before{
+    
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    left: -30px;
+    top: 6px;
+    border-radius: 50%;
+border:2px solid $Alabaster;
+    content: '';
+ 
+}
+li:nth-child(2)::before{
+    background-color: $Light-blue;
+}
+.side-bar div{
+    margin-left: 2em;
+}
+div p{
+    position: absolute;
+    left: -1em;
+}
+.main-page{
+    margin:2em -2em 0 4em;
+    overflow-x: hidden;
+    min-height: 90vh;
+    max-width: 450px
+}
+.header:first-child{
+    color: $Marine-blue;
+  
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.header:nth-child(2){
+    color: $Coolgray;
+    margin-bottom: 2em;
+}
+#page-2{
+    position: absolute;
+    top: .6em;
+    left: 50%;
+   
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+}
+.cards div{
+    border-radius:10px;
+   min-height: 13em;
+    padding:1em 3em 0 1em;
+    width: 9em;
+    position: relative;
+   cursor: pointer;
+}
+
+.cards div:not(:first-child){
+    border: 1px solid $Lightgray;
+    margin-left: 2em;
+}
+.cards div:hover{
+    border-color: $Marine-blue;
+}
+.cards div:first-child{
+    border: 1px solid $Marine-blue;
+    background-color: $Lightgray;
+}
+.cards div h3{
+    padding-top: 75em;
+
+}
+.package{
+    position: absolute;
+    bottom: 1em;
+font-weight: 900;
+text-transform: capitalize;
+color: $Marine-blue;
+}
+.pricing{
+    color: $Coolgray;
+    position: absolute;
+    bottom:-.5em;
+    
+}
+
+.sub-btn{
+    display: flex;
+    justify-content: space-around;
+    background-color: $Lightgray;
+    margin-top: 3em;
+    height: 50px;
+    border-radius: 10px;
+    
+}
+.sub-btn h3:nth-child(3){
+    color: $Coolgray;
+}
+
+.toggle{
+    width: 4em;
+    height: 1.6em;
+    background-color: $Marine-blue;
+    border-radius: 4em;
+    position: relative;
+    margin:0 -12em;
+    top: 1em;
+}
+.active-toggle{
+    transform: translateX(40px);
+}
+.toggle span{
+    border-radius: 50%;
+    background-color: $Alabaster;
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    top: .1em;
+    left: .1em;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 150px;
+    left: -80px;
+    max-height: 30px;
+    
+}
+
+.navigation a{
+text-decoration: none;
+color: $Coolgray;
+}
+.navigation a:hover{
+    color: $Marine-blue;
+}
+.main-page button{
+    background-color: $Marine-blue;
+    position: relative;
+   top: -1.32em;
+    left: 16em;
+    padding:1em 1.3em;
+    text-align: center;
+    color: $Alabaster;
+    border-radius: 3px;
+    cursor: pointer;
+}
