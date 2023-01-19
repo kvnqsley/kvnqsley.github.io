@@ -41,7 +41,7 @@ h4{
     text-transform: uppercase;
     color: $Alabaster;
 }
-h4:first-child{
+ li h4:nth-child(2){
     color: $Coolgray;
 }
 .list{
@@ -80,7 +80,7 @@ div p{
 }
 .main-page{
     margin:2em -2em 0 4em;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     min-height: 90vh;
     max-width: 450px
 }

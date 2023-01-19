@@ -34,7 +34,7 @@ h4 {
   color: #fafbff;
 }
 
-h4:first-child {
+li h4:nth-child(2) {
   color: #9699ab;
 }
 
@@ -77,7 +77,6 @@ div p {
 
 .main-page {
   margin: 2em -2em 0 4em;
-  overflow-x: hidden;
   min-height: 90vh;
   max-width: 450px;
 }

@@ -6,9 +6,15 @@
   display: none;
 }
 
+@font-face {
+  font-family: ubuntu-bold;
+  src: url(/assets/fonts/Ubuntu-Bold.ttf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: ubuntu-bold;
 }
 
 body {
@@ -36,7 +42,7 @@ h4 {
   color: #fafbff;
 }
 
-h4:first-child {
+li h4:nth-child(2) {
   color: #9699ab;
 }
 

@@ -51,7 +51,7 @@ h4{
     text-transform: uppercase;
     color: $Alabaster;
 }
-h4:first-child{
+li h4:nth-child(2){
     color: $Coolgray;
 }
 .list{

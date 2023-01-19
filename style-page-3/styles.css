@@ -45,7 +45,7 @@ h4 {
   color: #fafbff;
 }
 
-h4:first-child {
+li h4:nth-child(2) {
   color: #9699ab;
 }
 
