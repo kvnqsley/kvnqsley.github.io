@@ -1,16 +1,26 @@
 @font-face {
-  font-family: ubuntu;
+  font-family: ubuntu-bold;
   src: url(/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: ubuntu-medium;
+  src: url(/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: ubuntu-regular;
+  src: url(/assets/fonts/Ubuntu-Regular.ttf);
 }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: ubuntu;
 }
 
 body {
   font-size: 16px;
+  font-family: ubuntu-bold;
 }
 
 .desk {
@@ -27,6 +37,7 @@ body {
   width: 50vw;
   background-repeat: no-repeat;
   min-height: 90vh;
+  font-family: ubuntu-bold;
 }
 
 h4 {
@@ -62,7 +73,7 @@ li::before {
   content: '';
 }
 
-li:nth-child(2)::before {
+li:nth-child(3)::before {
   background-color: #bfe2fd;
 }
 
@@ -70,21 +81,22 @@ li:nth-child(2)::before {
   margin-left: 2em;
 }
 
-div p {
+div > p:not(main p) {
   position: absolute;
   left: -1em;
 }
 
-.main-page {
-  margin: 2em -2em 0 4em;
-  overflow-x: hidden;
-  min-height: 90vh;
-  max-width: 450px;
+.header {
+  display: inline-block;
+}
+
+.header p {
+  color: #d6d9e6;
 }
 
 .header:first-child {
   color: #02295a;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 2em;
 }
 
@@ -93,105 +105,74 @@ div p {
   margin-bottom: 2em;
 }
 
+.wrapper {
+  width: 500px;
+}
+
+.wrapper div:not(:last-child, .container) {
+  border: 2.2px solid #473dff;
+}
+
+.wrapper div:last-child {
+  border: 2.2px solid #d6d9e6;
+}
+
+.wrapper div {
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
+.main-container:last-child:hover {
+  cursor: pointer;
+  border: 2.2px solid #473dff;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container + p {
+  margin: -1.4em 0 1em 4.2em;
+  color: #d6d9e6;
+  font-weight: 600;
+}
+
+.container p:nth-child(3) {
+  color: #adbeff;
+  margin-right: 3em;
+}
+
+input {
+  margin: 4em 0 0 2em;
+  cursor: pointer;
+  position: relative;
+  accent-color: #473dff;
+}
+
+input + p {
+  color: #02295a;
+  font-weight: 900;
+  margin-left: -9em;
+  padding: 0;
+  min-width: 143px;
+}
+
+main {
+  margin: 2em -2em 0 4em;
+  overflow-x: hidden;
+  min-height: 90vh;
+  width: 500px;
+}
+
 #page-2 {
   position: absolute;
   top: .6em;
   left: 50%;
-}
-
-.cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  position: relative;
-  overflow: hidden;
-}
-
-.cards div {
-  border-radius: 10px;
-  min-height: 13em;
-  padding: 1em 3em 0 1em;
-  width: 9em;
-  position: relative;
-  cursor: pointer;
-}
-
-.cards div:not(:first-child) {
-  border: 1px solid #d6d9e6;
-  margin-left: 2em;
-}
-
-.cards div:hover {
-  border-color: #02295a;
-}
-
-.cards div:first-child {
-  border: 1px solid #02295a;
-  background-color: #d6d9e6;
-}
-
-.cards div h3 {
-  padding-top: 75em;
-}
-
-.package {
-  position: absolute;
-  bottom: 1em;
-  font-weight: 900;
-  text-transform: capitalize;
-  color: #02295a;
-}
-
-.pricing {
-  color: #9699ab;
-  position: absolute;
-  bottom: -.5em;
-}
-
-.sub-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: #d6d9e6;
-  margin-top: 3em;
-  height: 50px;
-  border-radius: 10px;
-}
-
-.toggle {
-  width: 4em;
-  height: 1.6em;
-  background-color: #02295a;
-  border-radius: 4em;
-  position: relative;
-  margin: 0 -12em;
-  top: 1em;
-}
-
-.active-toggle {
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
-}
-
-.active-color {
-  color: #02295a;
-}
-
-.toggle span {
-  border-radius: 50%;
-  background-color: #fafbff;
-  position: absolute;
-  width: 1.4em;
-  height: 1.4em;
-  top: .1em;
-  left: .1em;
-  cursor: pointer;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .navigation {
@@ -201,7 +182,7 @@ div p {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
-  top: 150px;
+  top: 100px;
   left: -80px;
   max-height: 30px;
 }
@@ -209,13 +190,14 @@ div p {
 .navigation a {
   text-decoration: none;
   color: #9699ab;
+  cursor: pointer;
 }
 
 .navigation a:hover {
   color: #02295a;
 }
 
-.main-page button {
+main button {
   background-color: #02295a;
   position: relative;
   top: -1.32em;

@@ -12,17 +12,26 @@ $Lightgray: hsl(229, 24%, 87%);
 $Magnolia: hsl(217, 100%, 97%);
 $Alabaster: hsl(231, 100%, 99%);
 $White: hsl(0, 0%, 100);
+
 @font-face {
-    font-family: ubuntu;
+    font-family:ubuntu-bold ;
     src: url(/assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family:ubuntu-medium ;
+    src: url(/assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family:ubuntu-regular ;
+    src: url(/assets/fonts/Ubuntu-Regular.ttf);
 }
 *{
     box-sizing: border-box;
-    font-family: ubuntu;
+    
 }
-
 body{
     font-size: 16px;
+    font-family: ubuntu-bold;
 }
 .desk{
     display: flex;
@@ -35,6 +44,7 @@ background-origin: border-box;
 width: 50vw;
   background-repeat: no-repeat;
 min-height: 90vh;
+font-family: ubuntu-bold;
 
 }
 h4{
@@ -68,127 +78,104 @@ border:2px solid $Alabaster;
     content: '';
  
 }
-li:nth-child(2)::before{
+li:nth-child(3)::before{
     background-color: $Light-blue;
 }
 .side-bar div{
     margin-left: 2em;
 }
-div p{
+div > p:not(main p){
     position: absolute;
     left: -1em;
 }
-.main-page{
-    margin:2em -2em 0 4em;
-    overflow-x: hidden;
-    min-height: 90vh;
-    max-width: 450px
+
+// main page
+
+.header{
+    display: inline-block;
 }
-.header:first-child{
+.header p{
+     color: $Lightgray;
+   
+ }
+ .header:first-child{
     color: $Marine-blue;
-  
-    font-weight: bold;
+    font-weight: 900;
     margin-bottom: 2em;
 }
 .header:nth-child(2){
     color: $Coolgray;
     margin-bottom: 2em;
 }
+ .wrapper{
+     width: 500px;
+ }
+ .wrapper div:not(:last-child,.container){
+border: 2.2px solid $Purplish-blue;
+ }
+ .wrapper div:last-child{
+    border: 2.2px solid $Lightgray;
+ }
+ .wrapper div{
+     margin-bottom: 1em;
+     border-radius: 8px;
+     
+ }
+ .main-container:last-child:hover{
+    cursor: pointer;
+    border: 2.2px solid $Purplish-blue;
+ }
+ .container{
+     display: flex;
+     justify-content: space-between;
+ 
+ }
+
+ .container + p{
+    margin: -1.4em 0 1em 4.2em;
+    color: $Lightgray;
+    font-weight: 600;
+ }
+ .container p:nth-child(3){
+     color: $Pastel-blue;
+     margin-right:3em ;
+    
+ }
+ input{
+    margin: 4em 0 0 2em;
+    cursor: pointer;
+    position: relative;
+    accent-color: $Purplish-blue;
+ }
+
+
+ 
+input + p{
+  color: $Marine-blue;
+  font-weight: 900; 
+  margin-left: -9em; 
+  padding: 0; 
+min-width: 143px;
+ }
+ main{
+    margin:2em -2em 0 4em;
+    overflow-x: hidden;
+    min-height: 90vh;
+    width: 500px
+}
+
 #page-2{
     position: absolute;
     top: .6em;
     left: 50%;
    
 }
-.cards{
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    overflow: hidden;
-}
-.cards div{
-    border-radius:10px;
-   min-height: 13em;
-    padding:1em 3em 0 1em;
-    width: 9em;
-    position: relative;
-   cursor: pointer;
-}
-
-.cards div:not(:first-child){
-    border: 1px solid $Lightgray;
-    margin-left: 2em;
-}
-.cards div:hover{
-    border-color: $Marine-blue;
-}
-.cards div:first-child{
-    border: 1px solid $Marine-blue;
-    background-color: $Lightgray;
-}
-.cards div h3{
-    padding-top: 75em;
-
-}
-.package{
-    position: absolute;
-    bottom: 1em;
-font-weight: 900;
-text-transform: capitalize;
-color: $Marine-blue;
-}
-.pricing{
-    color: $Coolgray;
-    position: absolute;
-    bottom:-.5em;
-    
-}
-
-.sub-btn{
-    display: flex;
-    justify-content: space-around;
-    background-color: $Lightgray;
-    margin-top: 3em;
-    height: 50px;
-    border-radius: 10px;
-    
-}
-
-// .sub-btn h3{
-//     color: $Coolgray;
-// }
-
-.toggle{
-    width: 4em;
-    height: 1.6em;
-    background-color: $Marine-blue;
-    border-radius: 4em;
-    position: relative;
-    margin:0 -12em;
-    top: 1em;
-}
-.active-toggle{
-    transform: translateX(40px);
-}
-.active-color{
-    color: $Marine-blue;
-}
-.toggle span{
-    border-radius: 50%;
-    background-color: $Alabaster;
-    position: absolute;
-    width: 1.4em;
-    height: 1.4em;
-    top: .1em;
-    left: .1em;
-    cursor: pointer;
-    transition: 1s;
-}
+ 
 .navigation{
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 150px;
+    top: 100px;
     left: -80px;
     max-height: 30px;
     
@@ -197,11 +184,13 @@ color: $Marine-blue;
 .navigation a{
 text-decoration: none;
 color: $Coolgray;
+cursor: pointer;
 }
 .navigation a:hover{
     color: $Marine-blue;
+
 }
-.main-page button{
+main button{
     background-color: $Marine-blue;
     position: relative;
    top: -1.32em;
