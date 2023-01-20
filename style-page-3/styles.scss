@@ -29,6 +29,9 @@ $White: hsl(0, 0%, 100);
     box-sizing: border-box;
     
 }
+.inactive{
+    display: none;
+}
 body{
     font-size: 16px;
     font-family: ubuntu-bold;
@@ -161,9 +164,14 @@ min-width: 143px;
     margin:2em -2em 0 4em;
     overflow-x: hidden;
     min-height: 90vh;
-    width: 500px
+    width: 500px;
+    position: relative;
 }
-
+#error-box{
+    color: $Strawberry-red;
+    position: absolute;
+    left: 50%;
+}
 #page-2{
     position: absolute;
     top: .6em;

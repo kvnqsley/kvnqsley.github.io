@@ -80,96 +80,34 @@ li p {
   left: -1em;
 }
 
-.main-page {
+main {
   margin: 2em -2em 0 4em;
+  overflow-x: hidden;
   min-height: 90vh;
-  max-width: 450px;
-}
-
-.header:first-child {
-  color: #02295a;
-  font-weight: bold;
-  margin-bottom: 2em;
-}
-
-.header:nth-child(2) {
-  color: #9699ab;
-  margin-bottom: 2em;
-}
-
-.cards div {
-  border-radius: 5px;
-  padding: .1em 1em 0 1em;
-  margin-bottom: 0em;
+  width: 500px;
   position: relative;
 }
 
-.card-2 p, .cards p:not(:first-child) {
-  color: #9699ab;
-}
-
-.card-1 p {
-  color: #02295a;
-  text-transform: capitalize;
-  padding-top: 1em 0;
-  min-height: 50px;
-}
-
-.card-1 span:nth-child(2) {
-  margin-top: -4em;
-  color: #02295a;
-  font-weight: 800;
-}
-
-.card-1 span:not(:nth-child(2)) {
-  color: #473dff;
-  font-family: ubuntu-reg;
-}
-
-span {
+img {
   position: absolute;
-  right: 2em;
-  margin-top: .5em;
+  left: 50%;
+  top: 20%;
 }
 
-.cards div:not(:last-child) {
-  background-color: #fafbff;
-}
-
-.card-2 span {
-  color: #473dff;
-}
-
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  position: relative;
-  top: 150px;
-  left: -80px;
-  max-height: 30px;
-}
-
-.navigation a {
-  text-decoration: none;
-  color: #9699ab;
-}
-
-.navigation a:hover {
+h3 {
+  position: absolute;
+  left: 40%;
+  top: 36%;
   color: #02295a;
+  font-weight: 900;
+  font-size: 2em;
 }
 
-.main-page button {
-  background-color: #02295a;
-  position: relative;
-  top: -1.32em;
-  left: 16em;
-  padding: 1em 1.3em;
-  text-align: center;
-  color: #fafbff;
-  border-radius: 3px;
-  cursor: pointer;
+main p {
+  position: absolute;
+  left: 10%;
+  top: 46%;
+  color: #9699ab;
+  font-family: ubuntu-reg;
 }
 /*# sourceMappingURL=styles.css.map */

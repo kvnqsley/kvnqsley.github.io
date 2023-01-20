@@ -18,6 +18,10 @@
           box-sizing: border-box;
 }
 
+.inactive {
+  display: none;
+}
+
 body {
   font-size: 16px;
   font-family: ubuntu-bold;
@@ -167,6 +171,13 @@ main {
   overflow-x: hidden;
   min-height: 90vh;
   width: 500px;
+  position: relative;
+}
+
+#error-box {
+  color: #ed3548;
+  position: absolute;
+  left: 50%;
 }
 
 #page-2 {
