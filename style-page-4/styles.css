@@ -1,0 +1,175 @@
+@font-face {
+  font-family: ubuntu;
+  src: url(/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: ubuntu-reg;
+  src: url(/assets/fonts/Ubuntu-Regular.ttf);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: ubuntu;
+}
+
+body {
+  font-size: 16px;
+}
+
+.desk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.side-bar {
+  background-image: url("/assets/images/bg-sidebar-mobile.svg");
+  background-origin: border-box;
+  background-size: cover;
+  border-radius: 1em;
+  width: 50vw;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+
+h4 {
+  text-transform: uppercase;
+  color: #fafbff;
+}
+
+li h4:nth-child(2) {
+  color: #9699ab;
+}
+
+.list {
+  position: relative;
+  top: 2em;
+  left: 2em;
+}
+
+li {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 6em;
+  color: #fafbff;
+}
+
+li::before {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  left: -30px;
+  top: 6px;
+  border-radius: 50%;
+  border: 2px solid #fafbff;
+  content: '';
+}
+
+li:nth-child(4)::before {
+  background-color: #bfe2fd;
+}
+
+.side-bar div {
+  margin-left: 2em;
+}
+
+li p {
+  position: absolute;
+  left: -1em;
+}
+
+.main-page {
+  margin: 2em -2em 0 4em;
+  min-height: 90vh;
+  max-width: 450px;
+}
+
+.header:first-child {
+  color: #02295a;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.header:nth-child(2) {
+  color: #9699ab;
+  margin-bottom: 2em;
+}
+
+.cards div {
+  border-radius: 5px;
+  padding: .1em 1em 0 1em;
+  margin-bottom: 0em;
+  position: relative;
+}
+
+.card-2 p, .cards p:not(:first-child) {
+  color: #9699ab;
+}
+
+.card-1 p {
+  color: #02295a;
+  text-transform: capitalize;
+  padding-top: 1em 0;
+  min-height: 50px;
+}
+
+.card-1 span:nth-child(2) {
+  margin-top: -2em;
+  color: #02295a;
+  font-weight: 800;
+}
+
+.card-1 span:not(:nth-child(2)) {
+  color: #473dff;
+  font-family: ubuntu-reg;
+}
+
+span {
+  position: absolute;
+  right: 2em;
+  margin-top: .5em;
+}
+
+.cards div:not(:last-child) {
+  background-color: #fafbff;
+}
+
+.card-2 span {
+  color: #473dff;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  top: 150px;
+  left: -80px;
+  max-height: 30px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #9699ab;
+}
+
+.navigation a:hover {
+  color: #02295a;
+}
+
+.main-page button {
+  background-color: #02295a;
+  position: relative;
+  top: -1.32em;
+  left: 16em;
+  padding: 1em 1.3em;
+  text-align: center;
+  color: #fafbff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

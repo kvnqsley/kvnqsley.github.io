@@ -1,0 +1,171 @@
+// ### Primary
+
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+// ### Neutral
+$Coolgray: hsl(231, 11%, 63%);
+$Lightgray: hsl(229, 24%, 87%);
+$Magnolia: hsl(217, 100%, 97%);
+$Alabaster: hsl(231, 100%, 99%);
+$White: hsl(0, 0%, 100);
+@font-face {
+    font-family: ubuntu;
+    src: url(/assets/fonts/Ubuntu-Bold.ttf);
+
+
+}
+@font-face {
+    font-family: ubuntu-reg;
+    src: url(/assets/fonts/Ubuntu-Regular.ttf);
+
+
+}
+*{
+    box-sizing: border-box;
+    font-family: ubuntu;
+}
+
+body{
+    font-size: 16px;
+}
+.desk{
+    display: flex;
+}
+.side-bar{
+   background-image:url('/assets/images/bg-sidebar-mobile.svg') ;  
+background-origin: border-box;
+   background-size: cover;
+   border-radius: 1em;
+width: 50vw;
+  background-repeat: no-repeat;
+min-height: 90vh;
+
+}
+h4{
+    text-transform: uppercase;
+    color: $Alabaster;
+}
+ li h4:nth-child(2){
+    color: $Coolgray;
+}
+.list{
+    position: relative;
+    top: 2em;
+    left: 2em;
+}
+li{
+  list-style-type:none ;
+    position: relative;
+    margin-bottom: 6em;
+    color: $Alabaster;
+    
+}
+li::before{
+    
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    left: -30px;
+    top: 6px;
+    border-radius: 50%;
+border:2px solid $Alabaster;
+    content: '';
+ 
+}
+li:nth-child(4)::before{
+    background-color: $Light-blue;
+}
+.side-bar div{
+    margin-left: 2em;
+}
+li p{
+    position: absolute;
+    left: -1em;
+}
+// main paage
+.main-page{
+    margin:2em -2em 0 4em;
+    // overflow-x: hidden;
+    min-height: 90vh;
+    max-width: 450px
+}
+.header:first-child{
+    color: $Marine-blue;
+  
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.header:nth-child(2){
+    color: $Coolgray;
+    margin-bottom: 2em;
+}
+.cards div{
+    border-radius: 5px;
+    padding: .1em 1em 0 1em ;
+    // display: flex;
+    margin-bottom: 0em;
+    position: relative;
+}
+.card-2 p,.cards p:not(:first-child){
+    color: $Coolgray;
+}
+.card-1 p{
+    color: $Marine-blue;
+    text-transform: capitalize;
+    padding-top: 1em 0;
+    min-height:50px;
+}
+.card-1 span:nth-child(2){
+    margin-top: -2em;
+    color: $Marine-blue;
+    font-weight: 800;
+    
+}
+.card-1 span:not(:nth-child(2)){
+    color: $Purplish-blue;
+    font-family: ubuntu-reg;
+}
+span{
+    position: absolute;
+    right: 2em;
+    margin-top: .5em;
+    // top: 1em;
+}
+.cards div:not(:last-child){
+    background-color:$Alabaster ;
+}
+.card-2 span{
+    color: $Purplish-blue;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 150px;
+    left: -80px;
+    max-height: 30px;
+    
+}
+
+.navigation a{
+text-decoration: none;
+color: $Coolgray;
+}
+.navigation a:hover{
+    color: $Marine-blue;
+}
+.main-page button{
+    background-color: $Marine-blue;
+    position: relative;
+   top: -1.32em;
+    left: 16em;
+    padding:1em 1.3em;
+    text-align: center;
+    color: $Alabaster;
+    border-radius: 3px;
+    cursor: pointer;
+}
