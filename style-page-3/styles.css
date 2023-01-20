@@ -168,7 +168,6 @@ input + p {
 
 main {
   margin: 2em -2em 0 4em;
-  overflow-x: hidden;
   min-height: 90vh;
   width: 500px;
   position: relative;
