@@ -46,6 +46,7 @@ li h4:nth-child(2) {
   position: relative;
   top: 2em;
   left: 2em;
+  width: 70%;
 }
 
 li {
@@ -173,7 +174,7 @@ label {
   .list {
     display: flex;
     justify-content: center;
-    left: 10%;
+    left: 20%;
     top: 100px;
   }
   li {
@@ -189,8 +190,8 @@ label {
     border-radius: 0.2em;
     position: absolute;
     top: 10%;
-    left: -10%;
-    width: 93%;
+    left: -15%;
+    width: 98%;
     background-color: hsl(231deg, 100%, 99%);
     height: 420px;
     padding: 1em 0 0 2em;
@@ -203,9 +204,10 @@ label {
     margin-bottom: 1em;
   }
   .main-page button {
-    bottom: -16em;
-    left: 20em;
-    padding: 1.3em;
+    bottom: -17em;
+    left: 19em;
+    padding: 1em;
+    width: 100px;
   }
   .error {
     color: hsl(354deg, 84%, 57%);
