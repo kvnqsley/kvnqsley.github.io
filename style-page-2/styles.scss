@@ -19,6 +19,7 @@ $White: hsl(0, 0%, 100);
 *{
     box-sizing: border-box;
     font-family: ubuntu;
+  
 }
 
 body{
@@ -52,7 +53,7 @@ h4{
 li{
   list-style-type:none ;
     position: relative;
-    margin-bottom: 6em;
+    margin-bottom: 2em;
     color: $Alabaster;
     
 }
@@ -205,7 +206,7 @@ color: $Coolgray;
     background-color: $Marine-blue;
     position: relative;
    top: -1.32em;
-    left: 16em;
+    left: 11.8em;
     padding:1em 1.3em;
     text-align: center;
     color: $Alabaster;

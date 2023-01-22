@@ -2,10 +2,8 @@
   font-family: ubuntu;
   src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: ubuntu;
 }
 
@@ -14,8 +12,6 @@ body {
 }
 
 .desk {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -31,11 +27,11 @@ body {
 
 h4 {
   text-transform: uppercase;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
 }
 
 li h4:nth-child(2) {
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
 }
 
 .list {
@@ -47,8 +43,8 @@ li h4:nth-child(2) {
 li {
   list-style-type: none;
   position: relative;
-  margin-bottom: 6em;
-  color: #fafbff;
+  margin-bottom: 2em;
+  color: hsl(231deg, 100%, 99%);
 }
 
 li::before {
@@ -58,12 +54,12 @@ li::before {
   left: -30px;
   top: 6px;
   border-radius: 50%;
-  border: 2px solid #fafbff;
-  content: '';
+  border: 2px solid hsl(231deg, 100%, 99%);
+  content: "";
 }
 
 li:nth-child(2)::before {
-  background-color: #bfe2fd;
+  background-color: hsl(206deg, 94%, 87%);
 }
 
 .side-bar div {
@@ -82,28 +78,25 @@ div p {
 }
 
 .header:first-child {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
   font-weight: bold;
   margin-bottom: 2em;
 }
 
 .header:nth-child(2) {
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
   margin-bottom: 2em;
 }
 
 #page-2 {
   position: absolute;
-  top: .6em;
+  top: 0.6em;
   left: 50%;
 }
 
 .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   position: relative;
   overflow: hidden;
 }
@@ -118,17 +111,17 @@ div p {
 }
 
 .cards div:not(:first-child) {
-  border: 1px solid #d6d9e6;
+  border: 1px solid hsl(229deg, 24%, 87%);
   margin-left: 2em;
 }
 
 .cards div:hover {
-  border-color: #02295a;
+  border-color: hsl(213deg, 96%, 18%);
 }
 
 .cards div:first-child {
-  border: 1px solid #02295a;
-  background-color: #d6d9e6;
+  border: 1px solid hsl(213deg, 96%, 18%);
+  background-color: hsl(229deg, 24%, 87%);
 }
 
 .cards div h3 {
@@ -140,22 +133,19 @@ div p {
   bottom: 1em;
   font-weight: 900;
   text-transform: capitalize;
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
 }
 
 .pricing {
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
   position: absolute;
-  bottom: -.5em;
+  bottom: -0.5em;
 }
 
 .sub-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: #d6d9e6;
+  justify-content: space-around;
+  background-color: hsl(229deg, 24%, 87%);
   margin-top: 3em;
   height: 50px;
   border-radius: 10px;
@@ -164,7 +154,7 @@ div p {
 .toggle {
   width: 4em;
   height: 1.6em;
-  background-color: #02295a;
+  background-color: hsl(213deg, 96%, 18%);
   border-radius: 4em;
   position: relative;
   margin: 0 -12em;
@@ -172,33 +162,28 @@ div p {
 }
 
 .active-toggle {
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
+  transform: translateX(40px);
 }
 
 .active-color {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
 }
 
 .toggle span {
   border-radius: 50%;
-  background-color: #fafbff;
+  background-color: hsl(231deg, 100%, 99%);
   position: absolute;
   width: 1.4em;
   height: 1.4em;
-  top: .1em;
-  left: .1em;
+  top: 0.1em;
+  left: 0.1em;
   cursor: pointer;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   position: relative;
   top: 150px;
   left: -80px;
@@ -207,22 +192,21 @@ div p {
 
 .navigation a {
   text-decoration: none;
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
 }
 
 .navigation a:hover {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
 }
 
 .main-page button {
-  background-color: #02295a;
+  background-color: hsl(213deg, 96%, 18%);
   position: relative;
   top: -1.32em;
-  left: 16em;
+  left: 11.8em;
   padding: 1em 1.3em;
   text-align: center;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
   border-radius: 3px;
   cursor: pointer;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

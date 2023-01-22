@@ -27,7 +27,7 @@ $White: hsl(0, 0%, 100);
 }
 *{
     box-sizing: border-box;
-    
+  outline: 2px solid yellow;  
 }
 .inactive{
     display: none;
@@ -65,7 +65,7 @@ li h4:nth-child(2){
 li{
   list-style-type:none ;
     position: relative;
-    margin-bottom: 6em;
+    margin-bottom: 4em;
     color: $Alabaster;
     
 }
@@ -202,7 +202,7 @@ main button{
     background-color: $Marine-blue;
     position: relative;
    top: -1.32em;
-    left: 16em;
+    left: 11.8em;
     padding:1em 1.3em;
     text-align: center;
     color: $Alabaster;
