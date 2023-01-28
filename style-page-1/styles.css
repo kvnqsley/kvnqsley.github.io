@@ -10,10 +10,8 @@
   font-family: ubuntu-bold;
   src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: ubuntu-bold;
 }
 
@@ -22,8 +20,6 @@ body {
 }
 
 .desk {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -39,11 +35,11 @@ body {
 
 h4 {
   text-transform: uppercase;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
 }
 
 li h4:nth-child(2) {
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
 }
 
 .list {
@@ -57,7 +53,7 @@ li {
   list-style-type: none;
   position: relative;
   margin-bottom: 2em;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
 }
 
 li::before {
@@ -67,12 +63,12 @@ li::before {
   left: -30px;
   top: 6px;
   border-radius: 50%;
-  border: 2px solid #fafbff;
-  content: '';
+  border: 2px solid hsl(231deg, 100%, 99%);
+  content: "";
 }
 
 li:first-child::before {
-  background-color: #bfe2fd;
+  background-color: hsl(206deg, 94%, 87%);
 }
 
 .side-bar div {
@@ -90,24 +86,24 @@ div p {
 }
 
 .main-page h3:first-child {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
 }
 
 .main-page h3:nth-child(2) {
   text-transform: capitalize;
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
   font-size: 16px;
   margin-bottom: 4em;
 }
 
 .main-page input {
   margin-bottom: 4em;
-  padding: .8em;
+  padding: 0.8em;
   width: 90%;
 }
 
 label {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
   width: 200px;
   overflow-x: hidden;
   display: inline-block;
@@ -116,11 +112,11 @@ label {
 }
 
 .set-error {
-  border: 1px solid #ed3548;
+  border: 1px solid hsl(354deg, 84%, 57%);
 }
 
 .error {
-  color: #ed3548;
+  color: hsl(354deg, 84%, 57%);
   font-size: 13px;
   display: inline;
   position: relative;
@@ -134,11 +130,11 @@ label {
 }
 
 .main-page button {
-  background-color: #02295a;
+  background-color: hsl(213deg, 96%, 18%);
   position: absolute;
   left: 16em;
   padding: 1.3em;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
   border-radius: 3px;
   cursor: pointer;
 }
@@ -146,7 +142,7 @@ label {
 .fa-check {
   position: relative;
   left: -1.3em;
-  top: .3em;
+  top: 0.3em;
 }
 
 #btn-link {
@@ -165,7 +161,7 @@ label {
     display: block;
   }
   .app {
-    background-color: #bfe2fd;
+    background-color: hsl(206deg, 94%, 87%);
     height: 100vh;
   }
   .side-bar {
@@ -176,12 +172,8 @@ label {
     top: -2em;
   }
   .list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     left: 20%;
     top: 100px;
   }
@@ -194,13 +186,13 @@ label {
   }
   .main-page {
     margin: 2em -2em 0 4em;
-    border: 1px solid #d6d9e6;
-    border-radius: .2em;
+    border: 1px solid hsl(229deg, 24%, 87%);
+    border-radius: 0.2em;
     position: absolute;
     top: 10%;
     left: -15%;
     width: 98%;
-    background-color: #fafbff;
+    background-color: hsl(231deg, 100%, 99%);
     height: 420px;
     padding: 1em 0 0 2em;
   }
@@ -218,7 +210,7 @@ label {
     width: 100px;
   }
   .error {
-    color: #ed3548;
+    color: hsl(354deg, 84%, 57%);
     font-size: 13px;
     display: inline;
     position: relative;
@@ -226,5 +218,4 @@ label {
     margin: 0;
     padding: 0;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

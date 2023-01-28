@@ -2,20 +2,16 @@
   font-family: ubuntu-bold;
   src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
-
 @font-face {
   font-family: ubuntu-medium;
   src: url(/assets/fonts/Ubuntu-Medium.ttf);
 }
-
 @font-face {
   font-family: ubuntu-regular;
   src: url(/assets/fonts/Ubuntu-Regular.ttf);
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .inactive {
@@ -28,8 +24,6 @@ body {
 }
 
 .desk {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -46,11 +40,11 @@ body {
 
 h4 {
   text-transform: uppercase;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
 }
 
 li h4:nth-child(2) {
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
 }
 
 .list {
@@ -63,7 +57,7 @@ li {
   list-style-type: none;
   position: relative;
   margin-bottom: 4em;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
 }
 
 li::before {
@@ -73,12 +67,12 @@ li::before {
   left: -30px;
   top: 6px;
   border-radius: 50%;
-  border: 2px solid #fafbff;
-  content: '';
+  border: 2px solid hsl(231deg, 100%, 99%);
+  content: "";
 }
 
 li:nth-child(3)::before {
-  background-color: #bfe2fd;
+  background-color: hsl(206deg, 94%, 87%);
 }
 
 .side-bar div {
@@ -95,17 +89,17 @@ div > p:not(main p) {
 }
 
 .header p {
-  color: #d6d9e6;
+  color: hsl(231deg, 11%, 63%);
 }
 
 .header:first-child {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
   font-weight: 900;
   margin-bottom: 2em;
 }
 
 .header:nth-child(2) {
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
   margin-bottom: 2em;
 }
 
@@ -114,11 +108,11 @@ div > p:not(main p) {
 }
 
 .wrapper div:not(:last-child, .container) {
-  border: 2.2px solid #473dff;
+  border: 2.2px solid hsl(243deg, 100%, 62%);
 }
 
 .wrapper div:last-child {
-  border: 2.2px solid #d6d9e6;
+  border: 2.2px solid hsl(229deg, 24%, 87%);
 }
 
 .wrapper div {
@@ -128,26 +122,22 @@ div > p:not(main p) {
 
 .main-container:last-child:hover {
   cursor: pointer;
-  border: 2.2px solid #473dff;
+  border: 2.2px solid hsl(243deg, 100%, 62%);
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .container + p {
   margin: -1.4em 0 1em 4.2em;
-  color: #d6d9e6;
+  color: hsl(231deg, 11%, 63%);
   font-weight: 600;
 }
 
 .container p:nth-child(3) {
-  color: #adbeff;
+  color: hsl(243deg, 100%, 62%);
   margin-right: 3em;
 }
 
@@ -155,11 +145,11 @@ input {
   margin: 4em 0 0 2em;
   cursor: pointer;
   position: relative;
-  accent-color: #473dff;
+  accent-color: hsl(243deg, 100%, 62%);
 }
 
 input + p {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
   font-weight: 900;
   margin-left: -9em;
   padding: 0;
@@ -174,23 +164,20 @@ main {
 }
 
 #error-box {
-  color: #ed3548;
+  color: hsl(354deg, 84%, 57%);
   position: absolute;
   left: 50%;
 }
 
 #page-2 {
   position: absolute;
-  top: .6em;
+  top: 0.6em;
   left: 50%;
 }
 
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   position: relative;
   top: 100px;
   left: -80px;
@@ -199,23 +186,22 @@ main {
 
 .navigation a {
   text-decoration: none;
-  color: #9699ab;
+  color: hsl(231deg, 11%, 63%);
   cursor: pointer;
 }
 
 .navigation a:hover {
-  color: #02295a;
+  color: hsl(213deg, 96%, 18%);
 }
 
 main button {
-  background-color: #02295a;
+  background-color: hsl(213deg, 96%, 18%);
   position: relative;
   top: -1.32em;
   left: 11.8em;
   padding: 1em 1.3em;
   text-align: center;
-  color: #fafbff;
+  color: hsl(231deg, 100%, 99%);
   border-radius: 3px;
   cursor: pointer;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

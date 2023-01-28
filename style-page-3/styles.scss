@@ -97,7 +97,7 @@ div > p:not(main p){
     display: inline-block;
 }
 .header p{
-     color: $Lightgray;
+     color: $Coolgray;
    
  }
  .header:first-child{
@@ -135,11 +135,11 @@ border: 2.2px solid $Purplish-blue;
 
  .container + p{
     margin: -1.4em 0 1em 4.2em;
-    color: $Lightgray;
+    color: $Coolgray;
     font-weight: 600;
  }
  .container p:nth-child(3){
-     color: $Pastel-blue;
+     color:$Purplish-blue;
      margin-right:3em ;
     
  }
