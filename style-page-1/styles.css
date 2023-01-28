@@ -10,8 +10,10 @@
   font-family: ubuntu-bold;
   src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
+
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: ubuntu-bold;
 }
 
@@ -20,6 +22,8 @@ body {
 }
 
 .desk {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -35,11 +39,11 @@ body {
 
 h4 {
   text-transform: uppercase;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
 }
 
 li h4:nth-child(2) {
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
 }
 
 .list {
@@ -53,7 +57,7 @@ li {
   list-style-type: none;
   position: relative;
   margin-bottom: 2em;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
 }
 
 li::before {
@@ -63,12 +67,12 @@ li::before {
   left: -30px;
   top: 6px;
   border-radius: 50%;
-  border: 2px solid hsl(231deg, 100%, 99%);
-  content: "";
+  border: 2px solid #fafbff;
+  content: '';
 }
 
 li:first-child::before {
-  background-color: hsl(206deg, 94%, 87%);
+  background-color: #bfe2fd;
 }
 
 .side-bar div {
@@ -86,24 +90,24 @@ div p {
 }
 
 .main-page h3:first-child {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
 }
 
 .main-page h3:nth-child(2) {
   text-transform: capitalize;
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
   font-size: 16px;
   margin-bottom: 4em;
 }
 
 .main-page input {
   margin-bottom: 4em;
-  padding: 0.8em;
+  padding: .8em;
   width: 90%;
 }
 
 label {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
   width: 200px;
   overflow-x: hidden;
   display: inline-block;
@@ -112,11 +116,11 @@ label {
 }
 
 .set-error {
-  border: 1px solid hsl(354deg, 84%, 57%);
+  border: 1px solid #ed3548;
 }
 
 .error {
-  color: hsl(354deg, 84%, 57%);
+  color: #ed3548;
   font-size: 13px;
   display: inline;
   position: relative;
@@ -130,11 +134,11 @@ label {
 }
 
 .main-page button {
-  background-color: hsl(213deg, 96%, 18%);
+  background-color: #02295a;
   position: absolute;
   left: 16em;
   padding: 1.3em;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -142,7 +146,7 @@ label {
 .fa-check {
   position: relative;
   left: -1.3em;
-  top: 0.3em;
+  top: .3em;
 }
 
 #btn-link {
@@ -161,7 +165,7 @@ label {
     display: block;
   }
   .app {
-    background-color: hsl(206deg, 94%, 87%);
+    background-color: #bfe2fd;
     height: 100vh;
   }
   .side-bar {
@@ -172,8 +176,12 @@ label {
     top: -2em;
   }
   .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     left: 20%;
     top: 100px;
   }
@@ -186,13 +194,13 @@ label {
   }
   .main-page {
     margin: 2em -2em 0 4em;
-    border: 1px solid hsl(229deg, 24%, 87%);
-    border-radius: 0.2em;
+    border: 1px solid #d6d9e6;
+    border-radius: .2em;
     position: absolute;
     top: 10%;
     left: -15%;
     width: 98%;
-    background-color: hsl(231deg, 100%, 99%);
+    background-color: #fafbff;
     height: 420px;
     padding: 1em 0 0 2em;
   }
@@ -210,12 +218,13 @@ label {
     width: 100px;
   }
   .error {
-    color: hsl(354deg, 84%, 57%);
+    color: #ed3548;
     font-size: 13px;
     display: inline;
     position: relative;
-    right: 2em;
+    right: -50px;
     margin: 0;
     padding: 0;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */

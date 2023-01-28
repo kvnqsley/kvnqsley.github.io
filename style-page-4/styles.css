@@ -2,12 +2,15 @@
   font-family: ubuntu;
   src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
+
 @font-face {
   font-family: ubuntu-reg;
   src: url(/assets/fonts/Ubuntu-Regular.ttf);
 }
+
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: ubuntu;
 }
 
@@ -16,6 +19,8 @@ body {
 }
 
 .desk {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -31,11 +36,11 @@ body {
 
 h4 {
   text-transform: uppercase;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
 }
 
 li h4:nth-child(2) {
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
 }
 
 .list {
@@ -48,7 +53,7 @@ li {
   list-style-type: none;
   position: relative;
   margin-bottom: 4em;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
 }
 
 li::before {
@@ -58,12 +63,12 @@ li::before {
   left: -30px;
   top: 6px;
   border-radius: 50%;
-  border: 2px solid hsl(231deg, 100%, 99%);
-  content: "";
+  border: 2px solid #fafbff;
+  content: '';
 }
 
 li:nth-child(4)::before {
-  background-color: hsl(206deg, 94%, 87%);
+  background-color: #bfe2fd;
 }
 
 .side-bar div {
@@ -82,29 +87,29 @@ li p {
 }
 
 .header:first-child {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
   font-weight: bold;
   margin-bottom: 2em;
 }
 
 .header:nth-child(2) {
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
   margin-bottom: 2em;
 }
 
 .cards div {
   border-radius: 5px;
-  padding: 0.1em 1em 0 1em;
+  padding: .1em 1em 0 1em;
   margin-bottom: 0em;
   position: relative;
 }
 
 .card-2 p, .cards p:not(:first-child) {
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
 }
 
 .card-1 p {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
   text-transform: capitalize;
   padding-top: 1em 0;
   min-height: 50px;
@@ -112,32 +117,35 @@ li p {
 
 .card-1 span:nth-child(2) {
   margin-top: -4em;
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
   font-weight: 800;
 }
 
 .card-1 span:not(:nth-child(2)) {
-  color: hsl(243deg, 100%, 62%);
+  color: #473dff;
   font-family: ubuntu-reg;
 }
 
 span {
   position: absolute;
   right: 2em;
-  margin-top: 0.5em;
+  margin-top: .5em;
 }
 
 .cards div:not(:last-child) {
-  background-color: hsl(231deg, 100%, 99%);
+  background-color: #fafbff;
 }
 
 .card-2 span {
-  color: hsl(243deg, 100%, 62%);
+  color: #473dff;
 }
 
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
   top: 150px;
   left: -80px;
@@ -146,21 +154,22 @@ span {
 
 .navigation a {
   text-decoration: none;
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
 }
 
 .navigation a:hover {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
 }
 
 .main-page button {
-  background-color: hsl(213deg, 96%, 18%);
+  background-color: #02295a;
   position: relative;
   top: -1.32em;
   left: 9.8em;
   padding: 1em 1.3em;
   text-align: center;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
   border-radius: 3px;
   cursor: pointer;
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */

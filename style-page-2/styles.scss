@@ -107,7 +107,7 @@ div p{
     position: relative;
     overflow: hidden;
 }
-.cards div{
+.cards div:not(.active-card){
     border-radius:10px;
    min-height: 13em;
     padding:1em 3em 0 1em;
@@ -116,16 +116,28 @@ div p{
    cursor: pointer;
 }
 
-.cards div:not(:first-child){
+.card-3,.card-2{
     border: 1px solid $Lightgray;
     margin-left: 2em;
 }
+
 .cards div:hover{
     border-color: $Marine-blue;
+    background-color: $Lightgray;
 }
-.cards div:first-child{
+
+.active-card{
     border: 1px solid $Marine-blue;
     background-color: $Lightgray;
+    border-radius:10px;
+    min-height: 13em;
+     padding:1em 3em 0 1em;
+  width: 8em;
+     left:0 ;
+     opacity: 1;
+     position: absolute;
+    cursor: pointer;
+    z-index: -100;
 }
 .cards div h3{
     padding-top: 75em;

@@ -2,8 +2,10 @@
   font-family: ubuntu;
   src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
+
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: ubuntu;
 }
 
@@ -12,6 +14,8 @@ body {
 }
 
 .desk {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -27,11 +31,11 @@ body {
 
 h4 {
   text-transform: uppercase;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
 }
 
 li h4:nth-child(2) {
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
 }
 
 .list {
@@ -44,7 +48,7 @@ li {
   list-style-type: none;
   position: relative;
   margin-bottom: 2em;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
 }
 
 li::before {
@@ -54,12 +58,12 @@ li::before {
   left: -30px;
   top: 6px;
   border-radius: 50%;
-  border: 2px solid hsl(231deg, 100%, 99%);
-  content: "";
+  border: 2px solid #fafbff;
+  content: '';
 }
 
 li:nth-child(2)::before {
-  background-color: hsl(206deg, 94%, 87%);
+  background-color: #bfe2fd;
 }
 
 .side-bar div {
@@ -78,30 +82,33 @@ div p {
 }
 
 .header:first-child {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
   font-weight: bold;
   margin-bottom: 2em;
 }
 
 .header:nth-child(2) {
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
   margin-bottom: 2em;
 }
 
 #page-2 {
   position: absolute;
-  top: 0.6em;
+  top: .6em;
   left: 50%;
 }
 
 .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
   overflow: hidden;
 }
 
-.cards div {
+.cards div:not(.active-card) {
   border-radius: 10px;
   min-height: 13em;
   padding: 1em 3em 0 1em;
@@ -110,18 +117,28 @@ div p {
   cursor: pointer;
 }
 
-.cards div:not(:first-child) {
-  border: 1px solid hsl(229deg, 24%, 87%);
+.card-3, .card-2 {
+  border: 1px solid #d6d9e6;
   margin-left: 2em;
 }
 
 .cards div:hover {
-  border-color: hsl(213deg, 96%, 18%);
+  border-color: #02295a;
+  background-color: #d6d9e6;
 }
 
-.cards div:first-child {
-  border: 1px solid hsl(213deg, 96%, 18%);
-  background-color: hsl(229deg, 24%, 87%);
+.active-card {
+  border: 1px solid #02295a;
+  background-color: #d6d9e6;
+  border-radius: 10px;
+  min-height: 13em;
+  padding: 1em 3em 0 1em;
+  width: 8em;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  cursor: pointer;
+  z-index: -100;
 }
 
 .cards div h3 {
@@ -133,19 +150,22 @@ div p {
   bottom: 1em;
   font-weight: 900;
   text-transform: capitalize;
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
 }
 
 .pricing {
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
   position: absolute;
-  bottom: -0.5em;
+  bottom: -.5em;
 }
 
 .sub-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  background-color: hsl(229deg, 24%, 87%);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #d6d9e6;
   margin-top: 3em;
   height: 50px;
   border-radius: 10px;
@@ -154,7 +174,7 @@ div p {
 .toggle {
   width: 4em;
   height: 1.6em;
-  background-color: hsl(213deg, 96%, 18%);
+  background-color: #02295a;
   border-radius: 4em;
   position: relative;
   margin: 0 -12em;
@@ -162,28 +182,33 @@ div p {
 }
 
 .active-toggle {
-  transform: translateX(40px);
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
 }
 
 .active-color {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
 }
 
 .toggle span {
   border-radius: 50%;
-  background-color: hsl(231deg, 100%, 99%);
+  background-color: #fafbff;
   position: absolute;
   width: 1.4em;
   height: 1.4em;
-  top: 0.1em;
-  left: 0.1em;
+  top: .1em;
+  left: .1em;
   cursor: pointer;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
   top: 150px;
   left: -80px;
@@ -192,21 +217,22 @@ div p {
 
 .navigation a {
   text-decoration: none;
-  color: hsl(231deg, 11%, 63%);
+  color: #9699ab;
 }
 
 .navigation a:hover {
-  color: hsl(213deg, 96%, 18%);
+  color: #02295a;
 }
 
 .main-page button {
-  background-color: hsl(213deg, 96%, 18%);
+  background-color: #02295a;
   position: relative;
   top: -1.32em;
   left: 11.8em;
   padding: 1em 1.3em;
   text-align: center;
-  color: hsl(231deg, 100%, 99%);
+  color: #fafbff;
   border-radius: 3px;
   cursor: pointer;
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */
