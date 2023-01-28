@@ -23,6 +23,13 @@
       
         
     })
+
+    //trigger the next button with  enter key
+    window.addEventListener('keypress',(e)=>{
+        if (e.key=='Enter') {
+           nxtBtn.click()
+        }
+    })
     function isChecked() {
         if ((storage.checked||profile.checked||online.checked)==true) {
             errorBox.classList.add('inactive')

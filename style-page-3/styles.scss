@@ -98,7 +98,9 @@ div > p:not(main p){
 }
 .header p{
      color: $Coolgray;
-   
+     font-family:ubuntu-medium ;
+     font-weight: 200;
+    
  }
  .header:first-child{
     color: $Marine-blue;
@@ -130,6 +132,7 @@ border: 2.2px solid $Purplish-blue;
  .container{
      display: flex;
      justify-content: space-between;
+ position: relative;
  
  }
 
@@ -155,14 +158,15 @@ border: 2.2px solid $Purplish-blue;
 input + p{
   color: $Marine-blue;
   font-weight: 900; 
-  margin-left: -9em; 
+  margin-left:4em; 
   padding: 0; 
 min-width: 143px;
+position: absolute;
  }
  main{
     margin:2em -2em 0 4em;
     // overflow-x: hidden;
-    min-height: 90vh;
+    height: 90vh;
     width: 500px;
     position: relative;
 }
@@ -171,13 +175,7 @@ min-width: 143px;
     position: absolute;
     left: 50%;
 }
-#page-2{
-    position: absolute;
-    top: .6em;
-    left: 50%;
-   
-}
- 
+
 .navigation{
     display: flex;
     justify-content: space-around;
@@ -207,4 +205,97 @@ main button{
     color: $Alabaster;
     border-radius: 3px;
     cursor: pointer;
+}
+
+//mobile design
+
+
+@media screen and (max-width:600px) {
+    body{
+        padding: 0;
+        margin: 0;
+        outline: 0;
+    }
+ 
+     .desk{
+         display: block;
+     
+         // height: 80vh;
+     }
+     .app{
+         background-color: $Light-blue;
+         height: 100vh;
+     } .side-bar{
+         background-size: contain;
+      width: 100%;;
+      height:490px;
+      position: relative;
+      top: -2em;
+      
+      }
+     .list{
+         display: flex;
+         justify-content: center;
+         left: 10%;
+         top: 100px;
+         width: 80%;
+     }
+     li{
+         margin-right: 2em;
+ margin-top: -4em;
+        
+     }
+     li h4{
+        display: none;
+       
+     }
+ 
+     //main page
+     main{
+        margin:2em -2em 0 4em;
+        border:1px solid $Lightgray;
+        border-radius: .4em;
+        position: absolute;
+        top:10%;
+        left:-9.5%;
+        width: 90%;
+        background-color: $Alabaster;
+        height: 420px;
+        padding:1em 0 0 2em;
+    }
+    .header p{
+        width: 300px;
+    }
+    .main-container{
+        width: 95%;
+        height: 10vh;
+    }
+    .wrapper{
+        width: 100%;
+    }
+ input{
+     top: -2em;
+ }
+ input +p{
+     margin-left: 3em;
+     top: -.7em;
+ }
+ 
+ .container + p{
+    margin: -3.5em 0 1em 3.7em;
+    font-family:ubuntu-regular ;
+    font-weight: 100;
+    font-size: 13px;
+ }
+ .container p:nth-child(3){
+position: absolute;
+right: -2em;
+}
+main button{
+    left: 11.2em;
+}
+#error-box{
+    left: 40%;
+    margin-top: -1em;
+}
 }
