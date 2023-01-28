@@ -26,6 +26,10 @@ $formValid:greenYellow;
     font-family:ubuntu-bold ;
     src: url(/assets/fonts/Ubuntu-Bold.ttf);
 }
+@font-face {
+    font-family:ubuntu-reg ;
+    src: url(/assets/fonts/Ubuntu-Regular.ttf);
+}
 *{
     box-sizing: border-box;
     font-family: ubuntu-bold;
@@ -114,9 +118,14 @@ margin-bottom: 4em;
 padding: .8em;
 width: 90%;
 // border-radius: 3px;
-
+font-weight: 100;
 }
-
+.main-page input[placeholder]{
+    font-family:ubuntu-reg ;
+}
+// .main-page input:focus-visible{
+//   border-color: greenyellow;
+// }
 label{
     color: $Marine-blue;
 width: 200px;
@@ -151,7 +160,7 @@ right: -2.5em;
 }
 .fa-check{
     position: relative;
-    left: -1.3em;
+    left: -1.5em;
     top: .3em;
 
 }

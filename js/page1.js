@@ -8,11 +8,11 @@ const inputs =document.querySelectorAll('input')
 const phone=document.querySelector('#phone')
 const label = document.querySelectorAll('label')
 
-inputs.forEach(element => {
-    element.addEventListener('focus',()=>{
-        element.style.borderColor=`greenyellow`
-    })
-});
+// inputs.forEach(element => {
+//     element.addEventListener('focus',()=>{
+//         element.style.borderColor=`greenyellow`
+//     })
+// });
 form.addEventListener('submit',(e)=>{
 
         if (name.value==='') {
@@ -51,7 +51,7 @@ errorBox.textContent= 'This field is required'
 
 
 name.addEventListener('input',()=>{
-    if (name.value.match(/\w/)) {
+    if (name.value.match(/(^[a-zA-Z][a-zA-Z\s]{1,27}[a-zA-Z]$)/)) {
         name.classList.add('set-success');
         name.classList.remove('set-error');
         const errorBox =phone.parentElement.children[1];
@@ -60,7 +60,7 @@ name.addEventListener('input',()=>{
          chck.classList.remove('inactive')
          
     }
-});console.log(form.children);
+});
 email.addEventListener('input',()=>{
     if (email.value.match(/^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$/)) {
         email.classList.add('set-success');
@@ -85,21 +85,4 @@ phone.addEventListener('input',(e)=>{
 })
 
 
-function setError() {
-  
-    // errorBox.forEach(element => {
-       
-    // // });
-    // // if (name.value=='') {
-    // //     name.classList.add('set-error');
-
-    // // }
-    // // if (email.value=='') {
- 
-    // // }
-    // // if (phone.value=='') {
-    // //     phone.classList.add('set-error');
-
-    // // }
-}
 
