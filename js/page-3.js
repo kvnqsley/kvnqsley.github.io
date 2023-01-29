@@ -11,6 +11,7 @@
     backBtn.addEventListener('click',()=>{
         history.back()
     });
+   
     nxtBtn.addEventListener('click',(e)=>{
     //  e.preventDefault()
             if ((storage.checked||profile.checked||online.checked)==false) {
@@ -21,7 +22,13 @@
             }
             setInterval(isChecked,2000)
       
-        
+        if (storage.checked) {
+            // localStorage.setItem('class','display')
+  
+        }
+        else if (online.checked) {
+            localStorage.setItem('class','display')
+        }
     })
 
     //trigger the next button with  enter key

@@ -1,7 +1,7 @@
 import { setYearly,setMonthly, addonsYearly,addonsMonthly } from "./utils.js";
 (function () {
    
-
+const btnLink= document.querySelector('.btn-link');
     const back=document.querySelector('.back-btn')
     const monthly=document.querySelector('.monthly');
     const yearly=document.querySelector('.yearly');
@@ -14,6 +14,19 @@ import { setYearly,setMonthly, addonsYearly,addonsMonthly } from "./utils.js";
     const arcadePricing=document.querySelector('.card-1 .pricing');
     const advancedPricing=document.querySelector('.card-2 .pricing');
     const proPricing=document.querySelector('.card-3 .pricing');
+    
+
+    const storage={
+        arcade:function () {
+            return  localStorage.setItem('package','Arcade (Yearly)');
+        },
+        advanced:function () {
+            localStorage.setItem('package','Advanced (Yearly)')
+        },
+        pro:function () {
+            localStorage.setItem('package','Pro (Yearly)')
+        }
+    }
     //trigger the next button with  enter key
     window.addEventListener('keypress',(e)=>{
         if (e.key=='Enter') {
@@ -34,8 +47,10 @@ import { setYearly,setMonthly, addonsYearly,addonsMonthly } from "./utils.js";
     if (yearly.classList.contains('active-color')===true) {
         setYearly();
         addonsYearly();
-
-        if (window.innerWidth<=600) {
+      //  localStorage.setItem('package','Arcade (Yearly)')
+      
+      //for mobile responsiveness
+      if (window.innerWidth<=600) {
             arcadePricing.textContent='$90/yr';
             advancedPricing.textContent='$120/yr';
             proPricing.textContent='$150/yr';
@@ -66,25 +81,24 @@ import { setYearly,setMonthly, addonsYearly,addonsMonthly } from "./utils.js";
     }
     });
     
-//     span1.textContent=localStorage.getItem('pc');
-// span2.textContent=localStorage.getItem('os');
-// span3.textContent=localStorage.getItem('ls');
-// span4.textContent=localStorage.getItem('total');
+
     
     //card effects
     window.addEventListener('DOMContentLoaded',()=>{
-        localStorage.clear()
+       //on refresh 
+        localStorage.clear();
         if (yearly.classList.contains('active-color')===false) {
             setMonthly();
-            addonsMonthly()
+            addonsMonthly();
+            localStorage.setItem('package','Arcade (Monthly)');
          }
-         localStorage.setItem('package','Arcade');
         
     })
+    //clicking the cards
     card1.addEventListener('click',(e)=>{
         activeCard.style.transform='translateX(0)';
         e.currentTarget.style.border='none';
-        localStorage.setItem('package','Arcade')
+        localStorage.setItem('package','Arcade (Monthly)')
         if (window.innerWidth<=600) {
             activeCard.style.transform='translateY(0)';
         }
@@ -93,7 +107,7 @@ import { setYearly,setMonthly, addonsYearly,addonsMonthly } from "./utils.js";
     card2.addEventListener('click',(e)=>{
     activeCard.style.transform='translateX(10em)';
     e.currentTarget.style.border='none';
-    localStorage.setItem('package','Advanced')
+    localStorage.setItem('package','Advanced (Monthly)')
     if (window.innerWidth<=600) {
         activeCard.style.transform='translateY(7em)';
     }
@@ -101,7 +115,7 @@ import { setYearly,setMonthly, addonsYearly,addonsMonthly } from "./utils.js";
     card3.addEventListener('click',(e)=>{
         activeCard.style.transform='translateX(20em)';
         e.currentTarget.style.border='none';
-        localStorage.setItem('package','Pro')
+        localStorage.setItem('package','Pro (Monthly)')
         if (window.innerWidth<=600) {
             activeCard.style.transform='translateY(14em)';
         }
@@ -110,5 +124,26 @@ import { setYearly,setMonthly, addonsYearly,addonsMonthly } from "./utils.js";
         if (window.innerWidth<=600) {
           
         }
-         
+       
+        btnLink.addEventListener(
+            'click',()=>{
+                if (yearly.classList.contains('active-color')===true
+                && activeCard.style.transform=='') {
+storage.arcade()
+            }
+            else if (yearly.classList.contains('active-color')===true
+            && activeCard.style.transform=='translateX(10em)') {
+storage.advanced()
+            }
+            else if (yearly.classList.contains('active-color')===true
+            && activeCard.style.transform=='translateX(20em)') {
+                storage.pro()
+            }
+           else if (yearly.classList.contains('active-color')===true
+            && activeCard.style.transform=='translateX(0px)') {
+storage.arcade()
+        }
+        }
+        )
+     
 })()
