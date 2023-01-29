@@ -234,7 +234,7 @@ label {
     width: 100%;
   }
   .main-page button {
-    left: 11em;
+    left: 100px;
   }
   li:last-child {
     position: relative;
