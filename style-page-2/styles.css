@@ -323,4 +323,20 @@ div p {
   .navigation {
     top: 6em;
   }
+}
+@media screen and (max-width: 300px) {
+  #page-2 {
+    left: -20%;
+    width: 97%;
+    height: 100vh;
+  }
+  #page-2 button {
+    left: 80%;
+  }
+  .navigation a {
+    margin-left: 15%;
+  }
+  .toggle {
+    margin: 0 -30px;
+  }
 }/*# sourceMappingURL=styles.css.map */
